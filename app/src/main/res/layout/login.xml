@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:drawableStart="@drawable/icon_login"
+                android:id="@+id/btnLogin"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignTop="@+id/editText2"
+                android:layout_marginTop="48dp"
+                android:background="#9575cd"
+                android:textColor="#ffffff"
+                android:layout_alignEnd="@+id/textView"
+                android:layout_alignStart="@+id/textView" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up"
+                android:drawableStart="@drawable/icon_signup"
+                android:id="@+id/btnSignUp"
+                android:layout_gravity="center_horizontal"
+                android:background="#9575cd"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/btnLogin"
+                android:layout_alignStart="@+id/btnLogin"
+                android:layout_marginTop="20dp"
+                android:layout_alignEnd="@+id/btnLogin" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText2"
+                android:hint="Password"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="169dp"
+                android:textColorHint="#ffffff" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:hint="Username"
+                android:layout_above="@+id/btnLogin"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="LOST &amp; FOUND"
+                android:id="@+id/textView"
+                android:textColor="#ffffff"
+                android:layout_above="@+id/textView3"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="THE"
+                android:id="@+id/textView2"
+                android:textColor="#ffffff"
+                android:layout_above="@+id/textView"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="APP"
+                android:id="@+id/textView3"
+                android:textColor="#fefefe"
+                android:layout_above="@+id/editText"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:src="@drawable/logo"
+                android:layout_above="@+id/textView2"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/textView"
+                android:layout_alignEnd="@+id/textView" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+</LinearLayout>
