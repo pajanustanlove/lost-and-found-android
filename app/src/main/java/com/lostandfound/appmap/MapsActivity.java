@@ -75,9 +75,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Philippines and move the camera
-        LatLng phil = new LatLng(12.091269, 121.973146);
+        LatLng phil = new LatLng(14.416892, 121.04124);
         mMap.addMarker(new MarkerOptions().position(phil).title("I'm here in the Philippines!"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(phil));
+        //zoom in to current location
+        CameraUpdate searchLocation = CameraUpdateFactory.newLatLngZoom(phil, 14);
+        mMap.animateCamera(searchLocation);
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setZoomGesturesEnabled(true);
 
@@ -93,7 +96,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setDummyMarkers(p);
 
         //zoom in to current location
-        CameraUpdate searchLocation = CameraUpdateFactory.newLatLngZoom(p, 15);
+        CameraUpdate searchLocation = CameraUpdateFactory.newLatLngZoom(p, 14);
         mMap.animateCamera(searchLocation);
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(p));
 
@@ -116,26 +119,72 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void setDummyMarkers(LatLng latLng){
-        mMap.addMarker(new MarkerOptions()
-                        .position(latLng)
-                        .title("Found")
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
-        );
+//        mMap.addMarker(new MarkerOptions()
+//                        .position(latLng)
+//                        .title("Found")
+//                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+//        );
 
         LatLng latLng1 = new LatLng(latLng.latitude + 0.001, latLng.longitude + 0.0001);
-        mMap.addMarker(new MarkerOptions()
+        Marker mark1 = mMap.addMarker(new MarkerOptions()
                         .position(latLng1)
-                        .title("Lost")
+                        .title("Lost Puppy")
+                        .snippet("I've lost my brown puppy wearing bell necklace :(")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
         );
+
 
         LatLng latLng2 = new LatLng(latLng.latitude + 0.003, latLng.longitude + 0.003);
         mMap.addMarker(new MarkerOptions()
                         .position(latLng2)
                         .title("Lost")
+                        .snippet("Pink Parisian body bag")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
 
         );
+
+
+        LatLng latLng3 = new LatLng(latLng.latitude + 0.008, latLng.longitude + 0.0005);
+        mMap.addMarker(new MarkerOptions()
+                        .position(latLng3)
+                        .title("Lost")
+                        .snippet("Plain pink Armando Caruso handkerchief")
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+        );
+
+        LatLng latLng4 = new LatLng(latLng.latitude + 0.002, latLng.longitude + 0.009);
+        mMap.addMarker(new MarkerOptions()
+                        .position(latLng4)
+                        .title("Lost")
+                        .snippet("Zenfone 5 in a Wellcom paper bag")
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+        );
+
+        LatLng latLng5 = new LatLng(latLng.latitude - 0.008, latLng.longitude - 0.0005);
+        mMap.addMarker(new MarkerOptions()
+                        .position(latLng5)
+                        .title("Lost")
+                        .snippet("Philips headset")
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+        );
+
+        LatLng latLng6 = new LatLng(latLng.latitude + 0.002, latLng.longitude + 0.008 );
+        mMap.addMarker(new MarkerOptions()
+                        .position(latLng6)
+                        .title("Found")
+                        .snippet("Brand new Zenfone")
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+        );
+
+        LatLng latLng7 = new LatLng(latLng.latitude - 0.005, latLng.longitude - 0.010);
+        mMap.addMarker(new MarkerOptions()
+                        .position(latLng7)
+                        .title("Found")
+                        .snippet("Orange cat")
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+        );
+
+
 
     }
 
